@@ -1,51 +1,90 @@
 :root {
---primary-color-text: #303030;
---accent-color: #FF6C00;
+  --primary-color-text: #303030;
+  --accent-color: #ff6c00;
 }
-body{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    color: var(--primary-color-text);
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: var(--primary-color-text);
 }
-.link{
-    text-decoration: none;
+.link {
+  text-decoration: none;
 }
-.list{
-    list-style: none;
+.list {
+  list-style: none;
 }
-  
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* header */
 .navigation {
-   background-color: #303030;
+  background-color: #303030;
 }
-   .navigation-link {
-  
- 
-        font-weight: 600;
-        font-size: 12px;
-        line-height: calc(16 / 12);
-        letter-spacing: 0.1em;
-    
-        color: #FFFFFF;
-   }
-   .navigation-link:hover,
-   .navigation-link:focus {
-color: var(--accent-color);
-   }
+.logo {
+padding-top: 52px;
+    padding-bottom: 102px;
+    margin-right: 130px;
+}
+.navigation-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+
+  color: #ffffff;
+  padding-top: 52px;
+  padding-bottom: 102px;
+  display: block;
+}
+.navigation-link:hover,
+.navigation-link:focus {
+  color: var(--accent-color);
+}
 .navigation-link.current {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
-   .link {}
+.link {
+}
 
-   .header-contact {}
+.header-contact {
+  padding-top: 52px;
+  padding-bottom: 102px;
+}
 
-   .header-btn {
-    font-family: 'Open Sans', sans-serif;
-       
-        font-weight: 600;
-        font-size: 12px;
-        line-height: calc(16 / 12);
-        letter-spacing: 0.09em;
-        text-transform: uppercase;
-        cursor: pointer;
-        color: #FFFFFF;
-   }
+.header-btn {
+  font-family: "Open Sans", sans-serif;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #ffffff;
+  /* padding: 12px 20px; */
+  min-width: 160px;
+  min-height: 40px;
+border: 1px solid #FF6C00;
+    border-radius: 25px;
+    border-color: transparent;
+}
+
+.header-container {
+  display: flex;
+}
+.navigation-list {
+  display: flex;
+  gap: 30px;
+}
+.contact-wrap{
+    display: flex;
+    gap: 43px;
+    margin-left: auto;
+}
