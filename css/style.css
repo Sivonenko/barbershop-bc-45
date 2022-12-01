@@ -179,6 +179,11 @@ img {
 */
 .header {
     background-color: var(--dark-bg-cl);
+    position: fixed;
+    top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
 }
 
 .header-container {
@@ -232,8 +237,44 @@ img {
   | Hero
   |============================
 */
-.hero {
-    background-color: #191c26;
+.hero-container {
+   
+display: flex;
+
+}
+.hero-left-side{
+        width: 100px;
+        display: flex;
+        align-items: flex-end;
+          
+}
+.hero-media-list {
+    transform: translateY(100%) rotate(-90deg);
+    transform-origin: left top;
+}
+.media-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.hero-media-list::before{
+        content: '';
+            display: block;
+            width: 60px;
+            height: 1px;
+            background-color: #303030;
+}
+.hero-right-side {
+        position: relative;
+ background-color: #191c26;
+    background-image: url(../images/hero/Slider3.jpeg);
+    width: 1070px;
+    background-repeat: no-repeat;
+    background-size: cover;
+        padding-top: 272px;
+            padding-bottom: 208px;
+            padding-left: 100px;
+            background-position: center;
 }
 
 .media-link {
@@ -257,17 +298,36 @@ img {
 
 .slider-btn {
     font-weight: 600;
-    font-size: 11px;
-    line-height: calc(15 / 11);
-    letter-spacing: 0.1em;
-
-    color: var(--light-txt-cl);
-
-    background-color: transparent;
-
-    cursor: pointer;
+        font-size: 11px;
+        line-height: calc(15 / 11);
+        letter-spacing: 0.1em;
+    
+        color: var(--light-txt-cl);
+        position: relative;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+}
+.slider-btn::after {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 60px;
+    background: rgba(157, 164, 189, 0.6);
+    left: 0;
+    bottom: -8px;
 }
 
+.slider-list {
+    position: absolute;
+        right: 20px;
+        bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 144px;
+}
 /**
   |============================
   | About
